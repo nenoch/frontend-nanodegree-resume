@@ -1,18 +1,34 @@
+var name = "Irene Canuti";
+var formattedName = HTMLheaderName.replace("%data%", name);
+
+
+var role = "Digital Designer and PM";
+var formattedRole = HTMLheaderRole.replace("%data%", role);
+
+
+$("#header").prepend(formattedRole);
+$("#header").prepend(formattedName);
+
 var bio = {
 	"name" : "Irene Canuti",
 	"role" : "Digital Designer and PM",
 	"contacts" : {
-		"mobile" : "+44(0)7721140857"
+		"mobile" : "+44(0)7721140857",
 		"email" : "irene.c@turnrealityon.com",
-		"github" : "nenoch"
-		"twitter" : "@irenecanuti_tro"
+		"github" : "nenoch",
+		"twitter" : "@irenecanuti_tro",
 		"location" : "London, UK"
 	},
 
 	"welcomeMessage" : "Welcome to my resume!",
 	"skills" : ["Visual Identity", "HTML/CSS", "Wordpress", "Adobe CS: Photoshop, InDesign, Illustrator", "Information Design", "Design Thinking", "Digital Strategy", "Brand Management", "Product Management", "Team building",
-"Lean Startup"]
+"Lean Startup"],
+	"bioPic" : "images/irene.jpg"
 };
+
+var formattedBioPic = HTMLbioPic.replace("%data%", bio.bioPic);
+$("#header").append(formattedBioPic);
+
 
 var education = {
 "schools" : [
@@ -72,50 +88,50 @@ var work = {
 	"employer" : "Self Employed",
 	"dates" : "2013 - Present",
 	"location" : "Italy, various locations | Shanghai, China | Greater London, UK",
-	"description" : "Digital Strategist & Project Manager",
-	"tasks" : ["Web Marketing", "E-commerce", "Web Design and Development", "UX", "Social Media", "Visual Identity", "Brand Management", "Digital Strategy", "User and Market Research"]
+	"title" : "Digital Strategist & Project Manager",
+	"description" : ["Web Marketing", "E-commerce", "Web Design and Development", "UX", "Social Media", "Visual Identity", "Brand Management", "Digital Strategy", "User and Market Research"]
 },
 {
 	"employer" : "DEtour",
-	"dates" : "2014-2015",
+	"dates" : "2014 - 2015",
 	"location" : "Kingston Upon Thames, Greater London",
-	"description" : "Managing Director & Product Manager",
-	"tasks" : ["R&D", "HCD", "Product Management", "Brand Management", "Marketing", "Lean Startup", "HR", "Pitching"]
+	"title" : "Managing Director & Product Manager",
+	"description" : ["R&D", "HCD", "Product Management", "Brand Management", "Marketing", "Lean Startup", "HR", "Pitching"]
 },
 {
 	"employer" : "Leaffing",
-	"dates" : "2013-2014",
+	"dates" : "2013 - 2014",
 	"location" : "Vicenza, Italy",
-	"description" : "Visual Designer",
-	"tasks" : ["Presentations", "Illustrations", "Video editing", "Brand Management", "Storytelling"]
+	"title" : "Visual Designer",
+	"description" : ["Presentations", "Illustrations", "Video editing", "Brand Management", "Storytelling"]
 },
 {
 	"employer" : "YouSporty.com",
-	"dates" : "2011-2013",
+	"dates" : "2011 - 2013",
 	"location" : "Padua, Italy",
-	"description" : "Web Marketing Assistant",
-	"tasks" : ["CRM", "Graphic and Web Design", "Visual Identity", "Web and Social marketing", "Direct Mailing", "PB digital marketing networks"]
+	"title" : "Web Marketing Assistant",
+	"description" : ["CRM", "Graphic and Web Design", "Visual Identity", "Web and Social marketing", "Direct Mailing", "PB digital marketing networks"]
 },
 {
 	"employer" : "thisisiconic",
 	"dates" : "2011",
 	"location" : "London, UK",
-	"description" : "Media Planner - Italian Market",
-	"tasks" : ["Web analysis", "Media planning", "Walled gardens definition", "Competitors analysis", "Website optimisation", "Presentations", "Adobe Flash Animations"]
+	"title" : "Media Planner - Italian Market",
+	"description" : ["Web analysis", "Media planning", "Walled gardens definition", "Competitors analysis", "Website optimisation", "Presentations", "Adobe Flash Animations"]
 },
 {
 	"employer" : "ASL Health Campus",
 	"dates" : "2010",
 	"location" : "Volterra, Italy",
-	"description" : "Tutor - Networks and Relationships",
-	"tasks" : ["Health promotion and projects management", "Planning and management of recreational and educational activities", "Teamwork management"]
+	"title" : "Tutor - Networks and Relationships",
+	"description" : ["Health promotion and projects management", "Planning and management of recreational and educational activities", "Teamwork management"]
 },
 {
 	"employer" : "Publimark",
 	"dates" : "2009",
 	"location" : "Grosseto, Italy",
-	"description" : "Junior Graphic Designer",
-	"tasks" : ["Copywriting", "Graphic Design", "Database Management"]
+	"title" : "Junior Graphic Designer",
+	"description" : ["Copywriting", "Graphic Design", "Database Management"]
 }
 
 ]
@@ -128,36 +144,37 @@ var projects = {
 	"client" : "TOGADA Studio",
 	"dates" : "2015",
 	"title" : "VIPics Website",
-	"description" : ["Web and Graphic Design, Wordpress customisation and UX Consultancy"]
+	"description" : "Web and Graphic Design, Wordpress customisation and UX Consultancy"
 },
 	{
 	"client" : "GIUSEPPE RIVADOSSI",
 	"dates" : "2013-2015",
 	"title" : "Web Identity and International Rebranding",
-	"description" : ["Web Design, Online Brand Management and Support during market expansion (Asia)"]
+	"description" : "Web Design, Online Brand Management and Support during market expansion (Asia)"
 },
 	{
 	"client" : "Barollo Wines",
 	"dates" : "2014-2015",
 	"title" : "Web Identity and Design",
-	"description" : ["UX Research and Consultancy, Brand identity and Graphci Design."]
+	"description" : "UX Research and Consultancy, Brand identity and Graphci Design."
 },
 	{
 	"client" : "Arredo91",
 	"dates" : "2014",
 	"title" : "Web Marketing",
-	"description" : ["Web and Social Media Marketing. Course design and Online training for the Marketing Department."]
+	"description" : "Web and Social Media Marketing. Course design and Online training for the Marketing Department."
 },
 	{
 	"client" : "Mondial Casa Italia",
 	"dates" : "2013",
 	"title" : "Mondial Casa Website",
-	"description" : ["E-commerce and Web identity"]
+	"description" : "E-commerce and Web identity"
 }
 
 ]
 
-}
+};
+
 
 if (bio.skills.length > 0) {
 	$("#header").append(HTMLskillsStart);
