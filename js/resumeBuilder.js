@@ -144,13 +144,13 @@ var projects = {
 	"client" : "TOGADA Studio",
 	"dates" : "2015",
 	"title" : "VIPics Website",
-	"description" : "Web and Graphic Design, Wordpress customisation and UX Consultancy"
+	"description" : "Web and Graphic Design, Wordpress customisation and UX Consultancy."
 },
 	{
 	"client" : "GIUSEPPE RIVADOSSI",
 	"dates" : "2013-2015",
 	"title" : "Web Identity and International Rebranding",
-	"description" : "Web Design, Online Brand Management and Support during market expansion (Asia)"
+	"description" : "Web Design, Online Brand Management and Support during market expansion (Asia)."
 },
 	{
 	"client" : "Barollo Wines",
@@ -254,15 +254,17 @@ projects.display = function() {
 		var formattedDescription = HTMLprojectDescription.replace("%data%", projects.projects[project].description);
 		$(".project-entry:last").append(formattedDescription);
 
-		if (projects.projects[project].images.length > 0) {
-			for (image in projects.projects[project].images) {
-				var formattedImage = HTMLprojectImage.replace("%data%", projects.projects[project].images[image]);
-				$(".project-entry:last").append(formattedImage);
-			}
-		}
+		// if (projects.projects[project].images.length > 0) {
+		// 	for (image in projects.projects[project].images) {
+		// 		var formattedImage = HTMLprojectImage.replace("%data%", projects.projects[project].images[image]);
+		// 		$(".project-entry:last").append(formattedImage);
+		// 	}
+		// }
 
 	}
-};
+}
+
+projects.display();
 
 $("#mapDiv").append(googleMap);
 
